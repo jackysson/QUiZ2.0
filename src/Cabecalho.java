@@ -7,8 +7,7 @@ public class Cabecalho {
         System.out.println("Matéria: Programação II.");
         System.out.println("-------//-------//-------//-------//-------");
         System.out.println("Bem vindo ao QUIZ." +
-                "você irá ser testado sobre seus conhecimetos em redes de internet" +
-                "boa sorte");
+                "você irá ser testado sobre seus conhecimetos em redes de internet boa sorte");
         System.out.println("Para ser aprovado tenha 7 acertos ou mais");
 
     }

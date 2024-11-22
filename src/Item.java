@@ -1,7 +1,7 @@
 import java.util.Scanner;
-import java.text.DecimalFormat;
 
 public class Item {
+
 
     //PERGUNTAS
     String questions = "";
@@ -64,4 +64,6 @@ public class Item {
         System.out.println("-------//-------//-------//-------//-------//-------");
         return false;
     }
+
+
 }

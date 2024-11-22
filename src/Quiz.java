@@ -1,9 +1,13 @@
+import java.text.DecimalFormat;
+
 public class Quiz {
     public static void main(String[] args) {
 
         Cabecalho.cabecalho();
         String resposta;
         int contador = 0;
+        System.out.println("");
+        System.out.println("-------//-------//-------//-------//-------");
 
         //QUESTÕES 1-15
         //PERGUNTA 01
@@ -375,5 +379,44 @@ public class Quiz {
         alter15.D = "[D] O cabo coaxial é mais barato que o cabo de fibra óptica. ";
         alter15.E = "[E] O cabo coaxial utiliza sinais digitais, enquanto o cabo de fibra óptica utiliza sinais analógicos.";
         alter15.correta = "B";
+
+        alter15.escrevaresposta();
+        if(alter15.verdadeira()){
+            contador++;
+        }
+        System.out.println("você acertou até agora: " +contador+"/15");
+        System.out.println("-------//-------//-------//-------//-------");
+        System.out.println("");
+
+        int contadore15 = 15 - contador;
+        System.out.println("Você errou atè agora: " +contadore15+ "/15");
+        System.out.println("-------//-------//-------//-------//-------");
+        System.out.println("");
+
+        //CONTADOR DE TOTAL DE ACERTOS
+        int contadore = 16 -contador;
+        System.out.println("Você chegou ao final do QUIZ");
+        System.out.println("O seu total de acertos foram: "+contador+"/15");
+        System.out.println("Você errou um total de: " +contadore+ "/15");
+
+        //APROVADO OU REPROVADO?
+        if (contador > 7){
+            System.out.println("Parabéns, você foi aprovado");
+        }
+        else {
+            System.out.println("Reprovado, Tente novamente");
+        }
+
+        // Calculando a porcentagem
+        double porcentagem = (contador / 15.0) * 100;
+
+        {
+            // Formatando a porcentagem com duas casas decimais
+            DecimalFormat df = new DecimalFormat("0.0");
+            String porcentagemFormatada = df.format(porcentagem);
+
+            System.out.println("A sua porcentagem de acertos é: " + porcentagemFormatada + "%");
+        }
     }
+
 }
